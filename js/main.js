@@ -16,23 +16,21 @@ elForm.addEventListener('submit', function(evt) {
     let inputValue = elFormInput.value;
     let selectValue = elFormSelect.value;
 
+    let price;
+
     if (selectValue == "usd") {
-        let price = (inputValue * usdPrice).toFixed(2);
-        elResult.textContent = `${price}`;
+        price = (inputValue * usdPrice).toFixed(2);
     } else if (selectValue == "euro") {
-        let price = (inputValue * euroPrice).toFixed(2);
-        elResult.textContent = `${price}`;
+        price = (inputValue * euroPrice).toFixed(2);
     } else if (selectValue == "rubl" ) {
-        let price = (inputValue * rublPrice).toFixed(2);
-        elResult.textContent = `${price}`;
+        price = (inputValue * rublPrice).toFixed(2);
     } else if (selectValue == "yuan" ) {
-        let price = (inputValue * yuanPrice).toFixed(2);
-        elResult.textContent = `${price}`;
+        price = (inputValue * yuanPrice).toFixed(2);
     } else if (selectValue == "dinor" ) {
-        let price = (inputValue * dinorPrice).toFixed(2);
-        elResult.textContent = `${price}`;
+        price = (inputValue * dinorPrice).toFixed(2);
     } else if (selectValue == "funt" ) {
-        let price = (inputValue * funtPrice).toFixed(2);
-        elResult.textContent = `${price}`;
+        price = (inputValue * funtPrice).toFixed(2);
     }
+
+    elResult.textContent = `${price}`;
 })
